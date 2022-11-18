@@ -1,11 +1,11 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.7
 
 import PackageDescription
 
 let package = Package(
     name: "LingoVapor",
     platforms: [
-       .macOS(.v10_15)
+       .macOS(.v13)
     ],
     products: [
         .library(name: "LingoVapor", targets: ["LingoVapor"]),
@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.27.0"),
         .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0"),
-        .package(url: "https://github.com/miroslavkovac/Lingo.git", from: "4.0.0")
+        .package(url: "https://github.com/photovirus/Lingo.git", branch: "regex-interpolator")
     ],
     targets: [
         .target(name: "LingoVapor", dependencies: [
